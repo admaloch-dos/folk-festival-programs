@@ -67,6 +67,6 @@ buttons.forEach(button => {
             items.forEach(item => {
                item.style.opacity = '1'
            })
-          }, 500);
+          }, 1000);
     })
 })
