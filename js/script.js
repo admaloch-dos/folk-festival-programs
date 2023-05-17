@@ -46,7 +46,7 @@ decadeDropDowns.forEach(decade => {
                     <h6 class="item-title mt-1">${currDecadeArr[i].text}</h6>
                     
                 <div class="text_overlay ">
-                <a href="https://www.floridamemory.com/items/show/${currDecadeArr[i].url}" target="_blank">
+                <a href="https://www.floridamemory.com/items/show/${currDecadeArr[i].url}" >
                 <h6>${currDecadeArr[i].text}</h6>
                     <span>View ${currDecadeArr[i].type}</span>                   
                     </a>
@@ -61,12 +61,12 @@ decadeDropDowns.forEach(decade => {
 // fade in items
 const buttons = document.querySelectorAll('.accordion-button')
 buttons.forEach(button => {
-    button.addEventListener('click', async  () =>  {
+    button.addEventListener('click',   () =>  {
         setTimeout(() => {
             const items =  document.querySelectorAll('.decade-item')
             items.forEach(item => {
                item.style.opacity = '1'
            })
-          }, 1000);
+          }, 800);
     })
 })
