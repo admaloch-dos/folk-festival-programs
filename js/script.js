@@ -46,9 +46,9 @@ decadeDropDowns.forEach(decade => {
                     <h6 class="item-title mt-1">${currDecadeArr[i].text}</h6>
                     
                 <div class="text_overlay ">
-                <a href="https://www.floridamemory.com/items/show/${currDecadeArr[i].url}" >
+                <a href="https://www.floridamemory.com/items/show/${currDecadeArr[i].url}" target="_blank">
                 <h6>${currDecadeArr[i].text}</h6>
-                    <span>View ${currDecadeArr[i].type}</span>                   
+                    <span class = "view-btn">View ${currDecadeArr[i].type}</span>                   
                     </a>
                 </div>
                 
@@ -61,12 +61,22 @@ decadeDropDowns.forEach(decade => {
 // fade in items
 const buttons = document.querySelectorAll('.accordion-button')
 buttons.forEach(button => {
-    button.addEventListener('click',   () =>  {
+    button.addEventListener('click', () => {
         setTimeout(() => {
-            const items =  document.querySelectorAll('.decade-item')
+            const items = document.querySelectorAll('.decade-item')
             items.forEach(item => {
-               item.style.opacity = '1'
-           })
-          }, 800);
+                item.style.opacity = '1'
+            })
+            const viewBtn = document.querySelectorAll('.view-btn')
+            viewBtn.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const collapseAccordion = document.querySelectorAll('.accordion-collapse')
+                    collapseAccordion.forEach(item => {
+                        item.classList.remove('show')
+                    })
+                })
+            })
+
+        }, 800);
     })
 })
