@@ -1,3 +1,20 @@
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    border: yellow solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#decades-accordion {
+    width: 100%;
+    max-width: 1000px;
+    /* margin-top: 10rem; */
+    padding: 3rem 0;
+}
+
 .item-img {
     max-height: 450px;
 }
@@ -11,22 +28,48 @@
     max-width: 350px;
 }
 
-.accordion-body div {
-    padding: 0 1em;
+
+
+.accordion-body a {
+    color: white;
+    /* transition: .2s all ease-in-out; */
 }
 
 
 .decade-item {
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
     overflow: hidden;
-
+    /* width: 150px; */
+    max-width: 50%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: all 1s ease-in;
+    padding: 0 .1rem;
+    /* opacity: 0; */
+    /* transition: all 1s ease-in; */
+}
+
+
+
+@media screen and (min-width: 414px) {
+    .decade-item {
+        max-width: 200px;
+        padding: 0 .3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .decade-item {
+        max-width: 210px;
+        padding: 0 .3rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .decade-item {
+        max-width: 240px;
+        padding: 0 .3rem;
+    }
 }
 
 
@@ -51,29 +94,10 @@
 }
 
 .accordion-button {
-    transition: all .3s ease-in-out;
+    /* transition: all .3s ease-in-out; */
     font-size: 22px;
 
 }
-
-
-
-.accordion-button:hover {
-    padding-left: 1.5em;
-    letter-spacing: 3px;
-}
-
-
-
-
-
-
-/* .decade-item:hover {
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-} */
-
-
 
 
 
@@ -82,74 +106,98 @@
     position: absolute;
     color: white;
     background: rgba(0, 0, 0, 0.7);
-    width: 90%;
-    height: 83%;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 1rem;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: white solid 1px;
 
 }
 
-.text_overlay:hover {
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+
+
+/* .text_overlay:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+} */
+
+.view-btn {
+    transition: all .2s ease-in-out;
+}
+.view-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.text_overlay a {
 
-    text-decoration: none;
+.decade-item:hover a {
+    text-decoration: none !important;
+}
+
+#decades-accordion a:hover {
+    text-decoration: none !important;
 }
 
 .text_overlay h6 {
-position: relative;
-bottom: 20px;
-   
+    position: relative;
+    bottom: 20px;
+
     padding: 0 15px;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
-.text_overlay a {
-    font-weight: bold;
 
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-size: 1em;
 
-    color: white;
-    transition: all .3s ease-in-out;
-}
+
+
+
 
 .text_overlay span {
-    border: 4px solid white;
-    padding: 10px 10px;
-
+    border: 2px solid white;
+    padding: 10px 0px;
+    font-size: .8rem;
+    /* transition: .1s ease-in-out all; */
 }
 
-.text_overlay div {
-    line-height: 6px;
-    font-size: 1.8em;
+@media screen and (min-width: 360px) {
+    .text_overlay span {
+        border: 3px solid white;
+        padding: 10px 4px;
+        font-size: .8rem;
+        /* transition: .1s ease-in-out all; */
+    }
 }
 
-.text_overlay span:hover {
-    background-color: rgba(255, 255, 255, .2);
-    /* background-color: black; */
-
+@media screen and (min-width: 450px) {
+    .text_overlay h6 {
+        font-size: 1.5em;
+    }
+    .text_overlay span {
+        border: 4px solid white;
+        padding: 10px 10px;
+        font-size: 1rem;
+        /* transition: .1s ease-in-out all; */
+    }
 }
 
-
-.decade-item:hover .text_overlay {
-    opacity: 1;
+.text_overlay {
+    transition: all .25s ease-in-out;
 }
 
-.decade-item .item-title,
-.decade-item .item-year {
-    opacity: 1;
-    transition: all .5s ease-in-out;
-}
+    .decade-item:hover .item-title,
+    .decade-item:hover .item-year {
+        opacity: 0;
+    }
 
-.decade-item:hover .item-title,
-.decade-item:hover .item-year {
-    opacity: 0;
-}
+    .decade-item:hover .text_overlay {
+        opacity: 1;
+    }
+
+    .decade-item .item-title,
+    .decade-item .item-year {
+        opacity: 1;
+        /* transition: all .5s ease-in-out; */
+    }
