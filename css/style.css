@@ -1,7 +1,6 @@
 .main-container {
     width: 100%;
     min-height: 100vh;
-    border: yellow solid 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,8 +10,58 @@
 #decades-accordion {
     width: 100%;
     max-width: 1000px;
-    /* margin-top: 10rem; */
     padding: 3rem 0;
+}
+
+
+
+.accordion-item .accordion-button {
+    transition: .2s ease-in-out all;
+}
+.accordion-item:hover .accordion-button {
+    letter-spacing: 3px;
+}
+
+.accordion-body a {
+    color: white;
+}
+
+.collapsing {
+    -webkit-transition-delay: .8s;
+    transition-delay: .8s;
+    transition: height .8s ease;
+  }
+
+.decade-item {
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .1rem;
+}
+
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: #FAFAFA;
+    --bs-accordion-active-bg: #FAFAFA;
+}
+
+.accordion-button {
+    color: #5c5c5cc4;
+    background-color: #FAFAFA;
+}
+
+.accordion-button:hover,
+.accordion-button:active {
+    color: #000000;
+    background-color: #f2f2f2;
+}
+
+.accordion-button {
+    font-size: 22px;
 }
 
 .item-img {
@@ -28,79 +77,6 @@
     max-width: 350px;
 }
 
-
-
-.accordion-body a {
-    color: white;
-    /* transition: .2s all ease-in-out; */
-}
-
-
-.decade-item {
-    transition: all .2s ease-in-out;
-    overflow: hidden;
-    /* width: 150px; */
-    max-width: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 .1rem;
-    /* opacity: 0; */
-    /* transition: all 1s ease-in; */
-}
-
-
-
-@media screen and (min-width: 414px) {
-    .decade-item {
-        max-width: 200px;
-        padding: 0 .3rem;
-    }
-}
-@media screen and (min-width: 768px) {
-    .decade-item {
-        max-width: 210px;
-        padding: 0 .3rem;
-    }
-}
-@media screen and (min-width: 992px) {
-    .decade-item {
-        max-width: 240px;
-        padding: 0 .3rem;
-    }
-}
-
-
-
-
-.accordion {
-    --bs-accordion-btn-focus-box-shadow: #FAFAFA;
-
-    --bs-accordion-active-bg: #FAFAFA;
-}
-
-.accordion-button {
-    color: #5c5c5cc4;
-    background-color: #FAFAFA;
-}
-
-.accordion-button:hover,
-.accordion-button:active {
-    color: #000000;
-    background-color: #f2f2f2;
-
-}
-
-.accordion-button {
-    /* transition: all .3s ease-in-out; */
-    font-size: 22px;
-
-}
-
-
-
 .text_overlay {
     text-align: center;
     position: absolute;
@@ -110,28 +86,24 @@
     height: 80%;
     margin-bottom: 1rem;
     opacity: 0;
-    /* transition: all 0.5s ease-in-out; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: white solid 1px;
-
 }
 
-
-
-/* .text_overlay:hover {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-} */
+.decade-item a {
+    text-decoration: none;
+}
 
 .view-btn {
     transition: all .2s ease-in-out;
 }
+
 .view-btn:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
-
 
 .decade-item:hover a {
     text-decoration: none !important;
@@ -144,22 +116,53 @@
 .text_overlay h6 {
     position: relative;
     bottom: 20px;
-
     padding: 0 15px;
     font-size: 1.1em;
 }
-
-
-
-
-
-
 
 .text_overlay span {
     border: 2px solid white;
     padding: 10px 0px;
     font-size: .8rem;
-    /* transition: .1s ease-in-out all; */
+}
+
+.text_overlay {
+    transition: all .25s ease-in-out;
+}
+
+.decade-item:hover .item-title,
+.decade-item:hover .item-year {
+    opacity: 0;
+}
+
+.decade-item:hover .text_overlay {
+    opacity: 1;
+}
+
+.decade-item .item-title,
+.decade-item .item-year {
+    opacity: 1;
+}
+
+@media screen and (min-width: 414px) {
+    .decade-item {
+        max-width: 200px;
+        padding: 0 .3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .decade-item {
+        /* max-width: 210px; */
+        padding: 0 .3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .decade-item {
+        max-width: 210px;
+        padding: 0 .8rem;
+    }
 }
 
 @media screen and (min-width: 360px) {
@@ -167,7 +170,6 @@
         border: 3px solid white;
         padding: 10px 4px;
         font-size: .8rem;
-        /* transition: .1s ease-in-out all; */
     }
 }
 
@@ -175,29 +177,10 @@
     .text_overlay h6 {
         font-size: 1.5em;
     }
+
     .text_overlay span {
         border: 4px solid white;
         padding: 10px 10px;
         font-size: 1rem;
-        /* transition: .1s ease-in-out all; */
     }
 }
-
-.text_overlay {
-    transition: all .25s ease-in-out;
-}
-
-    .decade-item:hover .item-title,
-    .decade-item:hover .item-year {
-        opacity: 0;
-    }
-
-    .decade-item:hover .text_overlay {
-        opacity: 1;
-    }
-
-    .decade-item .item-title,
-    .decade-item .item-year {
-        opacity: 1;
-        /* transition: all .5s ease-in-out; */
-    }
