@@ -1,4 +1,4 @@
-# folk-festival-program accordion viewer
+# Florida Folk Festival programs accordion viewer
 <b>About this project:</b><br/> 
 This is a rebuild of a page that displays all of the pamphlets and schedules for each annual Florida Folk Festival, which began in 1953. The old page was difficult to navigate, <a>https://www.floridamemory.com/learn/exhibits/florida-folklife/festival-programs.php<a/>, so I had to figure out a way to present them in a more logical way.  
 
