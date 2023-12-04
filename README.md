@@ -6,7 +6,7 @@ This is a rebuild of a page that displays all of the pamphlets and schedules for
 --Javascript<br/>
 --HTML<br/>
 --CSS<br/>
---PHP<br/>
+--PHP(will be added to the site in a php file upon approval)<br/>
 
 <b>Takeaways:</b><br/> 
 This was a relatively straightforward project, but It was a good exercise in problem solving. The festival has been going on since the 1950s, so I determined that the best way to display them would be to seperates them by decade. There are plenty of ways to do this, but we decided to keep it simple and load them into an accordion. I ended up building an accordion from scratch, as the website is running an old version of bootstrap and we didn't like the accordion from that version. 
