@@ -1,19 +1,20 @@
 # Florida Folk Festival program viewer
-<b>About this project:</b><br/>
-This was created for a rebuild of a Florida Memory website page that displays all of the pamphlets and schedules for each annual Florida Folk Festival, which began in 1953. The old page was difficult to navigate, <a>https://www.floridamemory.com/learn/exhibits/florida-folklife/festival-programs.php</a>, so I was tasked with reworking the way they are presented.
+<b>About this Project:</b><br/>
+This project was undertaken to revamp a page on the Florida Memory website, showcasing pamphlets and schedules from each annual Florida Folk Festival, dating back to its initial run in 1953. The [existing page](https://www.floridamemory.com/learn/exhibits/florida-folklife/festival-programs.php) posed navigation challenges, prompting a new approach to the design.
 
-<b>Technologies used:</b><br/>
+<b>Technologies Used:</b><br/>
 --<b>Javascript</b><br/>
 --<b>HTML</b><br/>
 --<b>CSS</b><br/>
---<b>PHP</b> (will be added to the site in a PHP file upon approval)<br/>
+--<b>PHP</b> (to be added to the site in a PHP file upon approval)<br/>
 
 <b>Takeaways:</b><br/>
-This was a relatively straightforward project, but it was a good exercise in problem-solving. The festival has been going on since the 1950s, so I determined that the best way to display them would be to separate them by decade. There are plenty of ways to do this, but we decided to keep it simple and load them into an accordion. I ended up building an accordion from scratch, as the website is running an older version of Bootstrap and we didn't like the accordion from that version.
+While considered a relatively straightforward project, it served as a valuable exercise in problem-solving. Given the festival's extensive history, spanning back to the 1950s, the most natural layout was to orgnize by decades. Despite multiple approaches available, we kept it simple with an accordion layout. Notably, we did not use Bootstrap for the accordion, as it is an older version of bootstrap with a jenky accordion. 
 
-<b>Current status:</b><br/>
-The project is complete and will be implemented after a successful communications review.
+<b>Current Status:</b><br/>
+The project has reached completion and awaits implementation following a successful communications review.
 
 <b>Note:</b><br/>
-The Florida Department of State is very security-focused, and version control software is not allowed, so you may not see much of a detailed git history for this project.
+The Florida Department of State places a strong emphasis on security, and version control software is restricted. Consequently, a detailed git history for this project may not be readily available.
+
 
